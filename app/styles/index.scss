@@ -1,7 +1,9 @@
-@import 'css/drunken-parrot';
-@import 'bootstrap/css/bootstrap';
+@import 'public/css/drunken-parrot';
+@import 'public/bootstrap/css/bootstrap';
 
 .sidebar {
   display: flex;
   flex-direction: column;
+  width: 20rem;
+  border-right: 1px solid #21cbcd;
 }
