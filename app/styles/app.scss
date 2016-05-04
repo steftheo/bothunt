@@ -8,6 +8,10 @@
 // http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
 // @include yoga-prototype();
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }

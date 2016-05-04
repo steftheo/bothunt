@@ -1,12 +1,16 @@
 @import 'public/css/drunken-parrot';
 @import 'public/bootstrap/css/bootstrap';
 
-.sidebar{
+.sidebar {
   display: flex;
   flex-direction: column;
   align-content: center;
   width: 20rem;
   margin: 1rem;
+}
+
+.platform__header {
+  font-size: 16px;
 }
 
 .platforms__categories {
