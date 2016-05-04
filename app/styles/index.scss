@@ -1,9 +1,27 @@
 @import 'public/css/drunken-parrot';
 @import 'public/bootstrap/css/bootstrap';
 
-.sidebar {
+.sidebar{
   display: flex;
   flex-direction: column;
+  align-content: center;
   width: 20rem;
-  border-right: 1px solid #21cbcd;
+  margin: 1rem;
+}
+
+.platforms__categories {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.platform__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
 }
