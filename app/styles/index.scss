@@ -6,10 +6,13 @@
   text-align: center;
 }
 
-
 .main {
   display: flex;
   margin: 0 auto;
+}
+
+.content {
+  flex-grow: 1;
 }
 
 .sidebar {
@@ -48,18 +51,20 @@
 .bot-row {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .bot-image {
-  width: 30%;
-  height: 30%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5px;
 }
 
-.bot__platform {
-  background: #02baf2;
-  color: #ffffff;
+.bot__platform-messenger {
   width: 12rem;
   height: 3rem;
+  color: #ffffff;
+  background: #0084FF;
   text-align: center;
 }
