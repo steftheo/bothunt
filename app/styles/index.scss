@@ -13,6 +13,7 @@
 
 .content {
   flex-grow: 1;
+  padding-right: 2rem;
 }
 
 .sidebar {
@@ -20,8 +21,9 @@
   flex-direction: column;
   align-content: center;
   width: 25rem;
+  margin: 24px auto;
   margin-top: 24px;
-  margin-left: 1rem;
+  padding-left: 1rem;
 }
 
 
@@ -32,7 +34,7 @@
 }
 
 .platforms__detail {
-  padding-top: 1rem;
+  padding-top: 2rem;
   list-style: none;
 }
 
@@ -55,10 +57,23 @@
   justify-content: space-between;
 }
 
+.bot-info {
+  display: flex;
+  align-items: center;
+}
+
 .bot-image {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 5px;
+  width: 8rem;
+  height: 8rem;
+  border-radius: inherit;
+}
+
+.bot__text-info {
+  margin-left: 3rem;
+}
+
+.bot__name {
+  font-size: 20px;
 }
 
 .bot__platform-messenger {
