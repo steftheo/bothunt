@@ -1,12 +1,18 @@
 @import 'public/css/drunken-parrot';
 @import 'public/bootstrap/css/bootstrap';
 
+.main {
+  display: flex;
+  margin: 0 auto;
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
   align-content: center;
   width: 20rem;
-  margin: 1rem;
+  margin-top: 24px;
+  margin-left: 1rem;
 }
 
 .platform__header {
@@ -19,6 +25,11 @@
   align-content: center;
 }
 
+.platforms__detail {
+  list-style: none;
+  padding-top: 1rem;
+}
+
 .platform__icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -28,4 +39,10 @@
 .footer {
   display: flex;
   flex-direction: column;
+}
+
+.row__bot {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
 }
