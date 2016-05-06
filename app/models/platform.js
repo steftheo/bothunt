@@ -3,11 +3,7 @@ import attr from 'ember-data/attr';
 import { hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
+  url: attr(),
   name: attr(),
-  email: attr(),
-  password: attr(),
-  imageUrl: attr(),
-  username: attr(),
-  likes: hasMany('like'),
-  bots: hasMany('bot')
+  implementations: hasMany('implementation')
 });
