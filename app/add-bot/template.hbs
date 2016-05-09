@@ -1,0 +1,37 @@
+<div class="modal fade modal--active" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        {{#link-to 'index'}}
+          <button type="button" class="close-form glyphicon glyphicon-remove" data-dismiss="modal"></button>
+        {{/link-to}}
+        <h4 class="modal-title" id="myModalLabel">Post a new bot</h4>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+         <span class="input-group-addon ss-write"></span>
+         <input type="text" class="form-control" placeholder="Bot Name">
+        </div>
+        <div class="input-group">
+         <span class="input-group-addon ss-globe"></span>
+         <input type="link" class="form-control" placeholder="Link to Bot">
+        </div>
+
+        <div class="input-group">
+         <span class="input-group-addon ss-quote"></span>
+         <input type="text" class="form-control" placeholder="Tagline">
+        </div>
+
+        <div class="input-group">
+         <span class="input-group-addon ss-downloadcloud"></span>
+         <input type="media" class="form-control" placeholder="Image Url">
+        </div>
+      </div>
+      <div class="modal-footer">
+        {{#link-to 'index'}}
+          <button type="button" class="btn btn-purple btn-embossed">Submit Bot!</button>
+        {{/link-to}}
+      </div>
+    </div>
+  </div>
+</div>
