@@ -1,0 +1,30 @@
+<div class="modal fade modal--active" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        {{#link-to 'index'}}
+          <button type="button" class="close-form glyphicon glyphicon-remove" data-dismiss="modal"></button>
+        {{/link-to}}
+        {{!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> --}}
+        <h4 class="modal-title" id="myModalLabel">Register to Join the Fun!</h4>
+      </div>
+      <div class="modal-body">
+        <form class="registration" {{action newUser model on="submit"}}>
+        <div class="form-group input-icon">
+         <span class="ss-mail"></span>
+         <input type="text" class="form-control" placeholder="E-mail">
+        </div>
+        <div class="form-group input-icon">
+         <span class="ss-lifepreserver"></span>
+         <input type="password" class="form-control" placeholder="Password">
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        {{#link-to 'index'}}
+          <button type="button" class="btn btn-purple btn-embossed">Register!</button>
+        {{/link-to}}
+      </div>
+    </div>
+  </div>
+</div>
