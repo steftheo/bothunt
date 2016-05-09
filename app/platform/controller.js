@@ -10,7 +10,12 @@ export default Ember.Controller.extend({
       return platformUrl.save();
     }).then(() => {
       this.transitionToRoute(`index`);
+    });
+  },
 
+  destroyPlatform(url) {
+    url.find(`post`).then(function (post) {
+      post.destroyRecord();
     });
   },
 });

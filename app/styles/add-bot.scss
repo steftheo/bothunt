@@ -10,8 +10,8 @@
 
 
 .input-group {
-  position: relative;
   display: table;
+  position: relative;
   border-collapse: separate;
 }
 
@@ -19,14 +19,23 @@
   border-radius: 4px;
 }
 
+.platform-checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
 
+.icons {
+  border-radius: 4px;
+}
 
 .checkbox {
   position: relative;
-  margin-bottom: 20px;
-  padding-left: 32px;
   font-size: 14px;
-  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
   line-height: 1.6;
   min-height: 20px;
+  margin-left: -40px;
 }
