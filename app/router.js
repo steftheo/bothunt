@@ -13,6 +13,7 @@ Router.map(function() {
     this.route(`login`);
   });
   this.route('add-bot');
+  this.route('platform');
 });
 
 export default Router;

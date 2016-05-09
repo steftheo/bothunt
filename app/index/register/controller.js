@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   newUser(attrs) {
-    const member = this.store.createRecord(`endUser`, attrs);
+    const user = this.store.createRecord(`end-user`, attrs);
 
-    member.save().then(() => {
+    user.save().then(() => {
       this.transitionToRoute(`index`);
     });
   },

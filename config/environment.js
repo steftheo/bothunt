@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    apiHost: 'http://localhost:3000',
+    apiHost: 'http://bothunt.herokuapp.com',
 
     modulePrefix: 'bothunt',
     environment: environment,

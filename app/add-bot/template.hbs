@@ -7,31 +7,93 @@
         {{/link-to}}
         <h4 class="modal-title" id="myModalLabel">Post a new bot</h4>
       </div>
+
+    {{#simple-form onsubmit=(action newBot) as |bot|}}
       <div class="modal-body">
-        <div class="input-group">
-         <span class="input-group-addon ss-write"></span>
-         <input type="text" class="form-control" placeholder="Bot Name">
-        </div>
-        <div class="input-group">
-         <span class="input-group-addon ss-globe"></span>
-         <input type="link" class="form-control" placeholder="Link to Bot">
-        </div>
-
-        <div class="input-group">
-         <span class="input-group-addon ss-quote"></span>
-         <input type="text" class="form-control" placeholder="Tagline">
+        <div class="form-group">
+          <p class="input-title">Name</p>
+          <div class="input-group">
+           <span class="input-group-addon ss-write"></span>
+           {{input type="text" class="form-control" placeholder="Bot Name" value=bot.name}}
+          </div>
         </div>
 
-        <div class="input-group">
-         <span class="input-group-addon ss-downloadcloud"></span>
-         <input type="media" class="form-control" placeholder="Image Url">
+        <div class="form-group">
+          <p class="input-title">Link</p>
+          <div class="input-group">
+           <span class="input-group-addon ss-globe"></span>
+           {{input type="link" class="form-control" placeholder="Link to Bot" value=bot.websiteUrl}}
+          </div>
         </div>
-      </div>
+
+        <div class="form-group">
+          <p class="input-title">Description</p>
+          <div class="input-group">
+           <span class="input-group-addon ss-quote"></span>
+           {{input type="text" class="form-control" placeholder="Tagline" value=bot.description}}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <p class="input-title">Platform</p>
+          {{#multiselect-checkboxes options=platforms selection=selectedPlatforms as |platform isSelected|}}
+          <li>
+            <label class="checkbox">
+              {{input type="checkbox" checked=isSelected}}
+                Messenger
+            </label>
+          </li>
+
+          <li>
+            <label class="checkbox">
+              {{input type="checkbox" checked=isSelected}}
+                Slack
+            </label>
+          </li>
+
+          <li>
+            <label class="checkbox">
+              {{input type="checkbox" checked=isSelected}}
+                Telegram
+            </label>
+          </li>
+
+          <li>
+            <label class="checkbox">
+              {{input type="checkbox" checked=isSelected}}
+                Kik
+            </label>
+          </li>
+
+          <li>
+            <label class="checkbox">
+              {{input type="checkbox" checked=isSelected}}
+                SMS/Text
+            </label>
+          </li>
+
+          <li>
+            <label class="checkbox">
+              {{input type="checkbox" checked=isSelected}}
+                Whatsapp
+            </label>
+          </li>
+          {{/multiselect-checkboxes}}
+        </div>
+
+        <div class="form-group">
+          <p class="input-title">Image</p>
+          <div class="input-group">
+           <span class="input-group-addon ss-downloadcloud"></span>
+           {{input type="media" value=bot.imageUrl class="form-control" placeholder="Image Url"}}
+          </div>
+        </div>
+        </div>
+
       <div class="modal-footer">
-        {{#link-to 'index'}}
           <button type="button" class="btn btn-purple btn-embossed">Submit Bot!</button>
-        {{/link-to}}
       </div>
+      {{/simple-form}}
     </div>
   </div>
 </div>

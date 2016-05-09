@@ -1,0 +1,32 @@
+@import 'public/bootstrap/css/bootstrap';
+@import 'public/css/drunken-parrot';
+
+.modal--active {
+  display: block;
+  margin-top: 10rem;
+  padding-top: 20rem;
+  opacity: 1;
+}
+
+
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+
+.icons {
+  border-radius: 4px;
+}
+
+
+
+.checkbox {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 32px;
+  font-size: 14px;
+  font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 20px;
+}

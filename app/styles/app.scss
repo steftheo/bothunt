@@ -1,9 +1,10 @@
 @import 'yoga';
-@import 'public/css/drunken-parrot';
 @import 'public/bootstrap/css/bootstrap';
+@import 'public/css/drunken-parrot';
 @import 'index';
 @import 'login';
 @import 'top-nav';
+@import 'add-bot';
 
 // Uncomment this for working with yoga prototyping
 // http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
@@ -15,5 +16,5 @@
 
 body {
   margin: 0;
-    background-color: #e1eef3;
+  background-color: #e1eef3;
 }

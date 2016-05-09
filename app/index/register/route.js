@@ -5,6 +5,8 @@ export default Ember.Route.extend({
     return {
       email: ``,
       password: ``,
+      name: ``,
+      username: ``,
     };
   },
 });

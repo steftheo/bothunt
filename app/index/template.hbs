@@ -1,5 +1,3 @@
-{{outlet}}
-
 <div class="welcome-text">
   <h3 class="welcome-heading">Welcome to Bot Hunt!</h3>
   <p class="welcome-subtext">The Best Way to Share & Find New ChatBots</p>
@@ -40,21 +38,22 @@
     </footer>
   </nav>
 
+{{#each model as |bot|}}
   <div class="content">
-    <h3 class="date">May 5th, 2016</h3>
+    <h3 class="date">{{bot.dateAdded}}</h3>
     <ul class="list-group">
       <li class="bot-row list-group-item">
         <div class="bot-info">
-          <img src="images/stefanbot.png" alt="" class="bot-image">
+          <img src={{bot.imageUrl}} alt="" class="bot-image">
           <div class="bot__text-info">
-            <h3 class="bot__name">StefanBot</h3>
-            <p class="bot__description">This is a bot</p>
+            <h3 class="bot__name">{{bot.name}}</h3>
+            <p class="bot__description">{{bot.description}}</p>
           </div>
         </div>
         <label class="bot__platform-messenger">Messenger</label>
         <button class="ss-globe bot__website"></button>
         <button type="button" class="bot__link">
-          <img class="bot__link-image" src="images/messenger.png" alt="">
+          <img class="bot__link-image" src="" alt="">
         </button>
         <div class="like-button">
           <button class="btn btn-default ss-star"><br>
@@ -63,4 +62,7 @@
       </li>
     </ul>
   </div>
+  {{/each}}
 </div>
+
+{{outlet}}
