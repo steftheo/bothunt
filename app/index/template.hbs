@@ -39,6 +39,7 @@
   </nav>
 
 {{#each model as |bot|}}
+{{#link-to 'bot-detail' app._id}}
   <div class="content">
     <h3 class="date">{{bot.dateAdded}}</h3>
     <ul class="list-group">
@@ -62,6 +63,7 @@
       </li>
     </ul>
   </div>
+  {{/link-to}}
   {{/each}}
 </div>
 

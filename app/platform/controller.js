@@ -2,20 +2,25 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   savePlatform({ name, url }) {
-    const platform = this.store.createRecord(`platform`, { name });
+    const platform = this.store.createRecord(`platform`, {
+      name: this.name,
+      url: this.url,
+    });
 
     platform.save().then(() => {
-      const platformUrl = this.store.createRecord(`url`, { url });
-
-      return platformUrl.save();
-    }).then(() => {
       this.transitionToRoute(`index`);
     });
   },
 
-  destroyPlatform(url) {
-    url.find(`post`).then(function (post) {
-      post.destroyRecord();
+  updatePlatform() {
+    this.store.findRecord(`platform`, 1).then(function(link) {
+      link.set(this.url);
+    });
+  },
+
+  destroyPlatform(platform) {
+    store.find(`platform`, 2).then(function (platform) {
+      platform.destroyRecord();
     });
   },
 });
