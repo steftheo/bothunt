@@ -14,7 +14,7 @@ Router.map(function() {
   });
   this.route('add-bot');
   this.route('platform');
-  this.route('bot-detail');
+  this.route('bot');
 });
 
 export default Router;

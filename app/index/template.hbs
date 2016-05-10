@@ -38,33 +38,33 @@
     </footer>
   </nav>
 
-{{#each model as |bot|}}
-{{#link-to 'bot-detail' app._id}}
-  <div class="content">
-    <h3 class="date">{{bot.dateAdded}}</h3>
-    <ul class="list-group">
-      <li class="bot-row list-group-item">
-        <div class="bot-info">
-          <img src={{bot.imageUrl}} alt="" class="bot-image">
-          <div class="bot__text-info">
-            <h3 class="bot__name">{{bot.name}}</h3>
-            <p class="bot__description">{{bot.description}}</p>
-          </div>
-        </div>
-        <label class="bot__platform-messenger">Messenger</label>
-        <button class="ss-globe bot__website"></button>
-        <button type="button" class="bot__link">
-          <img class="bot__link-image" src="" alt="">
-        </button>
-        <div class="like-button">
-          <button class="btn btn-default ss-star"><br>
-            100</button>
-        </div>
-      </li>
-    </ul>
-  </div>
-  {{/link-to}}
-  {{/each}}
-</div>
+{{!-- {{#each model as |bot|}} --}}
 
-{{outlet}}
+  <div class="content">
+    <h3 class="date">Today</h3>
+      <ul class="list-group">
+        {{#link-to 'bot'}}
+        <li class="list-group-item bot-row">
+          <div class="bot-info">
+            <img src="images/stefanbot.png" alt="" class="bot-image">
+            <div class="bot__text-info">
+              <h3 class="bot__name">stefanbot</h3>
+              <p class="bot__description">bot for stefan</p>
+            </div>
+          </div>
+          <label class="bot__platform-messenger">Messenger</label>
+          <button class="ss-globe bot__website"></button>
+            <a href="http://m.me/1160443300646330">
+              <img class="bot__link-image"  src="images/messenger.png" alt="" />
+            </a>
+          <div class="like-button">
+            <button class="btn btn-default ss-star"><br>
+              100</button>
+          </div>
+        </li>
+        {{/link-to}}
+      </ul>
+  </div>
+  {{!-- {{/each}} --}}
+  {{outlet}}
+</div>

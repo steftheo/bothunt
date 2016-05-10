@@ -8,34 +8,129 @@
         <h4 class="modal-title" id="myModalLabel">Post a new bot</h4>
       </div>
 
-    {{#simple-form onsubmit=(action newBot) as |bot|}}
-      <div class="modal-body">
-        <div class="form-group">
-          <p class="input-title">Name</p>
-          <div class="input-group">
-           <span class="input-group-addon ss-write"></span>
-           {{input type="text" class="form-control" placeholder="Bot Name" value=bot.name}}
-          </div>
+      {{#simple-form onsubmit=(action newBot) as |bot|}}
+        <div class="modal-body">
+          <form class="form-horizontal" role="form">
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label">Name</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <span class="input-group-addon ss-write"></span> {{input type="text" class="form-control input-sm" placeholder="Bot Name" value=bot.name}}
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label">Link</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <span class="input-group-addon ss-globe"></span> {{input type="link" class="form-control input-sm" placeholder="Link to Bot" value=bot.websiteUrl}}
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label">Description</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <span class="input-group-addon ss-quote"></span> {{input type="text" class="form-control" placeholder="Tagline" value=bot.description}}
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label">Platform</label>
+              <ul class="platform-checks">
+                <li>
+                  <label class="checkbox">
+                    <span class="icons">
+                <span class="first-icon"></span>
+                    </span>
+                    {{input type="checkbox" checked=isSelected}} Messenger
+                  </label>
+                </li>
+
+                <li>
+                  <label class="checkbox">
+                    <span class="icons">
+                <span class="first-icon"></span>
+                    </span>
+                    {{input type="checkbox" checked=isSelected}} Slack
+                  </label>
+                </li>
+
+                <li>
+                  <label class="checkbox">
+                    <span class="icons">
+                <span class="first-icon"></span>
+                    </span>
+                    {{input type="checkbox" checked=isSelected}} Telegram
+                  </label>
+                </li>
+
+                <li>
+                  <label class="checkbox">
+                    <span class="icons">
+                <span class="first-icon"></span>
+                    </span>
+                    {{input type="checkbox" checked=isSelected}} Kik
+                  </label>
+                </li>
+
+                <li>
+                  <label class="checkbox">
+                    <span class="icons">
+                <span class="first-icon"></span>
+                    </span>
+                    {{input type="checkbox" data-toggle="checkbox"}} SMS/Text
+                  </label>
+                </li>
+
+                <li>
+                  <label class="checkbox">
+                    <span class="icons">
+                <span class="first-icon"></span>
+                    </span>
+                    {{input type="checkbox" checked=isSelected}} Whatsapp
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label">Image</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <span class="input-group-addon ss-downloadcloud"></span> {{input type="media" value=bot.imageUrl class="form-control" placeholder="Image Url"}}
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
 
-        <div class="form-group">
-          <p class="input-title">Link</p>
+        {{!-- <div class="form-group"> --}}
+        {{!-- <p class="input-title">Name</p> --}}
+        {{!-- <div class="input-group">
+           <span class="input-group-addon ss-write"></span>
+           {{input type="text" class="form-control" placeholder="Bot Name" value=bot.name}}
+    </div> {{!-- </div> --}}
+
+    {{!-- <div class="form-group"> --}}
+    {{!-- <p class="input-title">Link</p>
           <div class="input-group">
            <span class="input-group-addon ss-globe"></span>
            {{input type="link" class="form-control" placeholder="Link to Bot" value=bot.websiteUrl}}
-          </div>
-        </div>
+  </div> {{!-- </div> --}}
 
-        <div class="form-group">
-          <p class="input-title">Description</p>
+  {{!-- <div class="form-group"> --}}
+  {{!-- <p class="input-title">Description</p>
           <div class="input-group">
            <span class="input-group-addon ss-quote"></span>
            {{input type="text" class="form-control" placeholder="Tagline" value=bot.description}}
-          </div>
-        </div>
+</div> {{!-- </div> --}}
 
-        <div class="form-group">
-          <p class="input-title">Platform</p>
+{{!-- <div class="form-group"> --}}
+{{!-- <p class="input-title">Platform</p>
           <ul class="platform-checks">
           <li>
             <label class="checkbox">
@@ -43,75 +138,67 @@
                 <span class="first-icon"></span>
               </span>
               {{input type="checkbox" checked=isSelected}}
-                Messenger
-            </label>
-          </li>
+Messenger </label>
+  </li>
 
-          <li>
-            <label class="checkbox">
-              <span class="icons">
+  <li>
+    <label class="checkbox">
+      <span class="icons">
                 <span class="first-icon"></span>
-              </span>
-              {{input type="checkbox" checked=isSelected}}
-                Slack
-            </label>
-          </li>
+      </span>
+      {{input type="checkbox" checked=isSelected}} Slack
+    </label>
+  </li>
 
-          <li>
-            <label class="checkbox">
-              <span class="icons">
+  <li>
+    <label class="checkbox">
+      <span class="icons">
                 <span class="first-icon"></span>
-              </span>
-              {{input type="checkbox" checked=isSelected}}
-                Telegram
-            </label>
-          </li>
+      </span>
+      {{input type="checkbox" checked=isSelected}} Telegram
+    </label>
+  </li>
 
-          <li>
-            <label class="checkbox">
-              <span class="icons">
+  <li>
+    <label class="checkbox">
+      <span class="icons">
                 <span class="first-icon"></span>
-              </span>
-              {{input type="checkbox" checked=isSelected}}
-                Kik
-            </label>
-          </li>
+      </span>
+      {{input type="checkbox" checked=isSelected}} Kik
+    </label>
+  </li>
 
-          <li>
-            <label class="checkbox">
-              <span class="icons">
+  <li>
+    <label class="checkbox">
+      <span class="icons">
                 <span class="first-icon"></span>
-              </span>
-              {{input type="checkbox" data-toggle="checkbox"}}
-                SMS/Text
-            </label>
-          </li>
+      </span>
+      {{input type="checkbox" data-toggle="checkbox"}} SMS/Text
+    </label>
+  </li>
 
-          <li>
-            <label class="checkbox">
-              <span class="icons">
+  <li>
+    <label class="checkbox">
+      <span class="icons">
                 <span class="first-icon"></span>
-              </span>
-              {{input type="checkbox" checked=isSelected}}
-                Whatsapp
-            </label>
-          </li>
-        </ul>
-        </div>
+      </span>
+      {{input type="checkbox" checked=isSelected}} Whatsapp
+    </label>
+  </li>
+  </ul> {{!-- </div> --}}
 
-        <div class="form-group">
-          <p class="input-title">Image</p>
+  {{!-- <div class="form-group"> --}}
+  {{!-- <p class="input-title">Image</p>
           <div class="input-group">
            <span class="input-group-addon ss-downloadcloud"></span>
            {{input type="media" value=bot.imageUrl class="form-control" placeholder="Image Url"}}
-          </div>
-        </div>
-        </div>
+  </div> {{!-- </div> --}}
+  {{!-- </div> --}}
 
-      <div class="modal-footer">
-          <button type="button" class="btn btn-purple btn-embossed">Submit Bot!</button>
-      </div>
-      {{/simple-form}}
-    </div>
+  <div class="modal-footer">
+    <button class="btn btn-purple btn-embossed add-bot__submit">Submit Bot!</button>
   </div>
-</div>
+  {{/simple-form}}
+  </div>
+  </div>
+  </div>

@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(url) {
-    return fetch(`http://bothunt.herokuapp.com/${url._id}`)
+  model() {
+    return fetch(`http://bothunt.herokuapp.com/`)
     .then(res => res.json());
   },
 });

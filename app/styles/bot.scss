@@ -1,0 +1,9 @@
+@import 'public/bootstrap/css/bootstrap';
+@import 'public/css/drunken-parrot';
+
+.modal--active {
+  display: block;
+  margin-top: 10rem;
+  padding-top: 20rem;
+  opacity: 1;
+}

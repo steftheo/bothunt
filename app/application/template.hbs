@@ -16,13 +16,14 @@
         {{#link-to 'add-bot'}}
         <button class="ss-plus"></button>
         {{/link-to}}
-        {{#link-to 'index.register'}}
-        <button type="submit" class="register-btn btn btn-default">Register</button>
-        {{/link-to}}
 
-        {{#link-to 'index.login'}}
-        <button type="submit" class="btn btn-primary btn-embossed">Login</button>
+        {{#link-to 'index.register'}}
+        <button class="register-btn btn btn-default btn__account-setup">Register</button>
         {{/link-to}}
+        {{#link-to 'index.login'}}
+        <button class="btn btn-primary btn-embossed btn__account-setup">Login</button>
+        {{/link-to}}
+        <p>{{session.session.content.authenticated.user.username}}</p>
       </div>
     </form>
     <div class="modal-overlay">
@@ -37,7 +38,7 @@
            <input type="password" class="form-control" placeholder="Password">
           </div>
 
-        <button class="btn btn-purple btn-embossed">Login!</button>
+        <button class="btn btn-purple btn-embossed login-btn">Login!</button>
       </div>
     </div>
   </div>

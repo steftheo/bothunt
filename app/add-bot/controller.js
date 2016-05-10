@@ -1,30 +1,30 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  bot: {},
-  actions: {
-    save() {
-      const { name, imageUrl, description, websiteUrl, platform } = this.get(`bot`);
-      const bot = this.store.createRecord(`bot`, {
-        name,
-        imageUrl,
-        description,
-        websiteUrl,
-        platform,
-      });
-      bot.save().then((savedBot) => {
-        this.transitionToRoute(`index`, savedBot);
-      });
-    },
-  },
-
-  // newBot(attrs) {
-  //   const bot = this.store.createRecord(`newBot`, attrs);
-  //
-  //   bot.save().then(() => {
-  //     this.transitionToRoute(`index`);
-  //   });
+  // bot: {},
+  // actions: {
+  //   save() {
+  //     const { name, imageUrl, description, websiteUrl, platform } = this.get(`bot`);
+  //     const bot = this.store.createRecord(`bot`, {
+  //       name,
+  //       imageUrl,
+  //       description,
+  //       websiteUrl,
+  //       platform,
+  //     });
+  //     bot.save().then((savedBot) => {
+  //       this.transitionToRoute(`index`, savedBot);
+  //     });
+  //   },
   // },
+
+  newBot(attrs) {
+    const bot = this.store.createRecord(`newBot`, attrs);
+
+    bot.save().then(() => {
+      this.transitionToRoute(`index`);
+    });
+  },
   //   const attributes = {
   //     name: this.name,
   //     description: this.description,

@@ -9,10 +9,14 @@
 }
 
 
-.input-group {
-  display: table;
-  position: relative;
-  border-collapse: separate;
+// .input-group {
+//   display: table;
+//   position: relative;
+//   border-collapse: separate;
+// }
+
+.form-horizontal {
+  margin-left: -5rem;
 }
 
 .icons {
@@ -32,10 +36,9 @@
   border-radius: 4px;
 }
 
-.checkbox {
-  position: relative;
-  font-size: 14px;
-  line-height: 1.6;
-  min-height: 20px;
-  margin-left: -40px;
-}
+// .checkbox {
+//   position: relative;
+//   font-size: 14px;
+//   line-height: 1.6;
+//   min-height: 20px;
+// }

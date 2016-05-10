@@ -1,5 +1,6 @@
-@import 'public/css/drunken-parrot';
 @import 'public/bootstrap/css/bootstrap';
+@import 'public/css/drunken-parrot';
+
 
 .welcome-text {
   text-align: center;
@@ -7,12 +8,7 @@
 
 .main {
   display: flex;
-  margin: 0 auto;
-}
-
-.content {
-  flex-grow: 1;
-  padding-right: 2rem;
+  margin: 0;
 }
 
 .sidebar {
@@ -20,11 +16,9 @@
   flex-direction: column;
   align-content: center;
   width: 25rem;
-  margin: 24px auto;
   margin-top: 24px;
   padding-left: 1rem;
 }
-
 
 .platforms__categories {
   display: flex;
@@ -42,18 +36,21 @@
   height: 2.5rem;
 }
 
-
 .footer {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
+.container {
+  position: relative;
+  border: 1px solid #f2f2f2;
+}
+
 .bot-row {
   display: flex;
-  flex-direction: row;
+  flex-grow: 1;
   align-items: center;
-  justify-content: space-between;
 }
 
 .bot-info {

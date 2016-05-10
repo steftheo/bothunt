@@ -5,6 +5,7 @@
 @import 'login';
 @import 'top-nav';
 @import 'add-bot';
+@import 'bot';
 
 // Uncomment this for working with yoga prototyping
 // http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
@@ -17,4 +18,10 @@
 body {
   margin: 0;
   background-color: #e1eef3;
+}
+
+.fade {
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
