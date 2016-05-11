@@ -1,0 +1,44 @@
+@import 'public/bootstrap/css/bootstrap';
+@import 'public/css/drunken-parrot';
+
+.modal--active {
+  display: block;
+  margin-top: 10rem;
+  padding-top: 20rem;
+  opacity: 1;
+}
+
+
+// .input-group {
+//   display: table;
+//   position: relative;
+//   border-collapse: separate;
+// }
+
+.form-horizontal {
+  margin-left: -5rem;
+}
+
+.icons {
+  border-radius: 4px;
+}
+
+.platform-checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.icons {
+  border-radius: 4px;
+}
+
+// .checkbox {
+//   position: relative;
+//   font-size: 14px;
+//   line-height: 1.6;
+//   min-height: 20px;
+// }

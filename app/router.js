@@ -6,7 +6,21 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('logout');
+  this.route(`logout`);
+
+  this.route(`index`, { path: `/` }, function() {
+    this.route(`register`);
+    this.route(`login`);
+  });
+  this.route('add-bot');
+  this.route('platform', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: '/:id'
+    });
+  });
+  this.route('bot');
 });
 
 export default Router;

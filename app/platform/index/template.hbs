@@ -1,0 +1,35 @@
+<h1>All Platforms</h1>
+
+{{#link-to 'platform.new'}}
+  Add Platform
+{{/link-to}}
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each model as |platform|}}
+    <tr>
+      <td>{{platform.id}}</td>
+      <td>{{platform.name}}</td>
+      <td>{{#link-to "platform.edit" platform.id}}
+      <span class="fa fa-pencil"></span>
+      {{/link-to}}
+    </td>
+      <td>
+        <button{{action delete platform}}>
+          <span class="fa fa-trash"></span>
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+</table>

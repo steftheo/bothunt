@@ -1,0 +1,12 @@
+<h1>Edit Platform</h1>
+
+{{#simple-form startingValues=model onsubmit=(action savePlatform model) as |formValues|}}
+  <p>{{input placeholder="URL" value=formValues.url}}</p>
+
+  <p>{{input placeholder="Name" value=formValues.name}}</p>
+
+  <p>{{#link-to 'platform.index'}}Cancel{{/link-to}}
+
+  <button>Save</button>
+  </p>
+{{/simple-form}}

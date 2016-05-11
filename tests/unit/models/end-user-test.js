@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('end-user', 'Unit | Model | end user', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:like', 'model:bot']
 });
 
 test('it exists', function(assert) {

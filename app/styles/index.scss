@@ -1,0 +1,97 @@
+@import 'public/bootstrap/css/bootstrap';
+@import 'public/css/drunken-parrot';
+
+
+.welcome-text {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  margin: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 25rem;
+  margin-top: 24px;
+  padding-left: 1rem;
+}
+
+.platforms__categories {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.platforms__detail {
+  padding-top: 2rem;
+  list-style: none;
+}
+
+.platform__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  border: 1px solid #f2f2f2;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.bot-image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: inherit;
+}
+
+.bot__text-info {
+  margin-left: 3rem;
+}
+
+.bot__name {
+  font-size: 20px;
+}
+
+.bot__platform-messenger {
+  width: 12rem;
+  height: 3rem;
+  color: #ffffff;
+  background: #0084FF;
+  text-align: center;
+}
+
+.bot__website {
+  white-space: none;
+  background: none;
+  border: 0;
+}
+
+.bot__link {
+  white-space: none;
+  background: none;
+  border: 0;
+}
+
+.bot__link-image {
+  width: 3rem;
+  height: 3rem;
+  white-space: none;
+  background: none;
+  border: 0;
+}

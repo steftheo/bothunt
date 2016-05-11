@@ -1,1 +1,47 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    {{#link-to 'index'}}
+    <div class="navbar-header">
+      <img class="logo" src="images/Bothunt logo.png" alt="Bot" />
+    </div>
+    {{/link-to}}
+    <form class="navbar-form">
+      <div class="form-group navbar-left col-md-6">
+        <div class="input-icon">
+          <span class="ss-search"></span>
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </div>
+      <div class="navbar-right">
+        {{#link-to 'add-bot'}}
+        <button class="ss-plus"></button>
+        {{/link-to}}
+
+        {{#link-to 'index.register'}}
+        <button class="register-btn btn btn-default btn__account-setup">Register</button>
+        {{/link-to}}
+        {{#link-to 'index.login'}}
+        <button class="btn btn-primary btn-embossed btn__account-setup">Login</button>
+        {{/link-to}}
+        <p>{{session.session.content.authenticated.user.username}}</p>
+      </div>
+    </form>
+    <div class="modal-overlay">
+      <h2 class="login-header">Login to Join the Community!</h2>
+        <div class="login-forms">
+          <div class="form-group input-icon">
+           <span class="ss-mail"></span>
+           <input type="text" class="form-control" placeholder="E-mail">
+          </div>
+          <div class="form-group input-icon">
+           <span class="ss-lifepreserver"></span>
+           <input type="password" class="form-control" placeholder="Password">
+          </div>
+
+        <button class="btn btn-purple btn-embossed login-btn">Login!</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
 {{outlet}}
