@@ -13,7 +13,13 @@ Router.map(function() {
     this.route(`login`);
   });
   this.route('add-bot');
-  this.route('platform', function() {});
+  this.route('platform', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: '/:id'
+    });
+  });
   this.route('bot');
 });
 
