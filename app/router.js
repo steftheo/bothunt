@@ -26,6 +26,10 @@ Router.map(function() {
     });
   });
   this.route('bot');
+
+  this.route('feature', function() {
+    this.route('my-profile');
+  });
 });
 
 export default Router;

@@ -1,0 +1,22 @@
+<div class="main container">
+  <div class="sidebar affix hidden-xs hidden-sm">
+    <ul class="nav affix" data-spy="affix">
+      <li><h2>{{model.user.name}}</h2></li>
+      <li>
+        <h3>{{model.user.username}}</h3>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="content">
+    <div class="nav-bar">
+      <ul class="nav nav-tabs nav-stroke nav-justified">
+        <li class="active"><a href="#">Liked</a></li>
+        <li><a href="#">Made By Me</a></li>
+        <li><a href="#">Submitted</a></li>
+</ul>
+    </div>
+    {{model.bots.length}}
+  </div>
+</div>
