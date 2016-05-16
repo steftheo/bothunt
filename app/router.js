@@ -17,7 +17,15 @@ Router.map(function() {
     this.route('add-bot', function() {
     });
   });
-  this.route('platform', function() {});
+  this.route('add-bot');
+  this.route('platform', function() {
+    this.route('new');
+
+    this.route('edit', {
+      path: '/:id'
+    });
+  });
+  this.route('bot');
 });
 
 export default Router;
