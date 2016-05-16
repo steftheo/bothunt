@@ -3,32 +3,32 @@
   <p class="welcome-subtext">The Best Way to Share & Find New ChatBots</p>
 </div>
 
-<div class="main">
+<div class="main container">
   <nav class="sidebar">
       <ul class="platforms__categories">
         <h5 class="platform__header">Platforms</h5>
         <li class="platforms__detail">
-          <img class="platform__icon" src="images/messenger.png" alt="messenger" /> Messenger
+          <a href="#"><img class="platform__icon" src="images/messenger.png" alt="messenger" /> Messenger</a>
         </li>
 
       <li class="platforms__detail">
-        <img class="platform__icon" src="images/telegram.png" alt="Telegram" /> Telegram
+        <a href="#"><img class="platform__icon" src="images/telegram.png" alt="Telegram" /> Telegram</a>
       </li>
 
       <li class="platforms__detail">
-        <img class="platform__icon" src="images/kik.png" alt="Kik" /> Kik
+        <a href="#"><img class="platform__icon" src="images/kik.png" alt="Kik" /> Kik</a>
       </li>
 
       <li class="platforms__detail">
-        <img class="platform__icon" src="images/slack.png" alt="Slack" /> Slack
+        <a href="#"><img class="platform__icon" src="images/slack.png" alt="Slack" /> Slack</a>
       </li>
 
       <li class="platforms__detail">
-        <img class="platform__icon" src="images/text.png" alt="SMS" /> SMS/Text
+        <a href="#"><img class="platform__icon" src="images/text.png" alt="SMS" /> SMS/Text</a>
       </li>
 
       <li class="platforms__detail">
-        <img class="platform__icon" src="images/whatsapp.png" alt="whatsapp" /> Whatsapp
+        <a href="#"><img class="platform__icon" src="images/whatsapp.png" alt="whatsapp" /> Whatsapp</a>
       </li>
     </ul>
 
@@ -38,33 +38,32 @@
     </footer>
   </nav>
 
-{{!-- {{#each model as |bot|}} --}}
-
-  <div class="content">
-    <h3 class="date">Today</h3>
-      <ul class="list-group">
-        {{#link-to 'bot'}}
-        <li class="list-group-item bot-row">
-          <div class="bot-info">
-            <img src="images/stefanbot.png" alt="" class="bot-image">
-            <div class="bot__text-info">
-              <h3 class="bot__name">stefanbot</h3>
-              <p class="bot__description">bot for stefan</p>
+<div class="content">
+  {{#each model as |bot|}}
+    <div class="bot-item">
+      <h3 class="date">Today</h3>
+        <ul class="list-group">
+          {{#link-to 'index.bot' bot.id}}
+          <li class="list-group-item bot-row">
+            <div class="bot-info">
+              <img src={{bot.imageUrl}} alt="" class="bot-image">
+              <div class="bot__text-info">
+                <h3 class="bot__name">{{bot.name}}</h3>
+                <p class="bot__description">{{bot.description}}</p>
+              </div>
             </div>
-          </div>
-          <label class="bot__platform-messenger">Messenger</label>
-          <button class="ss-globe bot__website"></button>
-            <a href="http://m.me/1160443300646330">
-              <img class="bot__link-image"  src="images/messenger.png" alt="" />
+            <a href="{{bot.website}}">
+              <span class="ss-globe bot__website"></span>
             </a>
-          <div class="like-button">
-            <button class="btn btn-default ss-star"><br>
-              100</button>
-          </div>
-        </li>
-        {{/link-to}}
-      </ul>
-  </div>
-  {{!-- {{/each}} --}}
+            <div class="like-button">
+              <button class="btn btn-default ss-star"><br>
+                100</button>
+            </div>
+          </li>
+          {{/link-to}}
+        </ul>
+    </div>
+  {{/each}}
+</div>
   {{outlet}}
 </div>

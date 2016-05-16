@@ -13,12 +13,4 @@ export default Ember.Controller.extend({
         window.alert(`Try again! Your credentials didn't match :(`);
       });
   },
-  // login(attrs) {
-  //   this.get(`session`).authenticate(`authenticator:application`, attrs.email, attrs.password)
-  //   .then(() => {
-  //     console.log(`logged in`);
-  //   }).catch((err) => {
-  //     console.log(err);
-  //   });
-  // },
 });

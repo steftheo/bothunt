@@ -11,6 +11,11 @@ Router.map(function() {
   this.route(`index`, { path: `/` }, function() {
     this.route(`register`);
     this.route(`login`);
+    this.route('bot', {
+      path: '/:id'
+    });
+    this.route('add-bot', function() {
+    });
   });
   this.route('add-bot');
   this.route('platform', function() {

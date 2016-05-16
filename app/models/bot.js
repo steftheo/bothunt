@@ -4,7 +4,8 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   name: attr(),
-  descriptionimageUrl: attr(),
+  description: attr(),
+  imageUrl: attr(),
   websiteUrl: attr(),
   dateAdded: attr(),
   endUser: belongsTo('end-user'),
