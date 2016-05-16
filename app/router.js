@@ -12,7 +12,7 @@ Router.map(function() {
     this.route(`register`);
     this.route(`login`);
     this.route('bot', {
-      path: '/id'
+      path: '/:id'
     });
     this.route('add-bot', function() {
     });

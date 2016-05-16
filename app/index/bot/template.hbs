@@ -5,15 +5,18 @@
         {{#link-to 'index'}}
           <button type="button" class="close-form glyphicon glyphicon-remove" data-dismiss="modal"></button>
         {{/link-to}}
-        <h4 class="modal-title" id="myModalLabel">StefanBot</h4>
+        {{#each model as |bot|}}
+
+        {{/each}}
+        <h4 class="modal-title" id="myModalLabel">{{bot.name}}</h4>
       </div>
       <div class="modal-body">
         <div class="header">
           <div class="bot-detail__info">
-            <img src="images/stefanbot.png" alt="" class="bot-detail__image">
+            <img src="{{bot.imageUrl}}" alt="" class="bot-detail__image">
             <div class="bot-detail__text">
-              <h3 class="bot-detail__name">Stefan Bot</h3>
-              <p class="bot-detail__desc">Resume Bot</p>
+              <h3 class="bot-detail__name">{{bot.name}}</h3>
+              <p class="bot-detail__desc">{{bot.description}}</p>
             </div>
             <div class="bot-detail__like-btn">
               <button class="btn btn-default ss-star">
