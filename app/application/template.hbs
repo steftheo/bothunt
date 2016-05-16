@@ -13,17 +13,23 @@
         </div>
       </div>
       <div class="navbar-right">
-        {{#link-to 'index.add-bot'}}
-        <button class="ss-plus"></button>
-        {{/link-to}}
-
-        {{#link-to 'index.register'}}
-        <button class="register-btn btn btn-default btn__account-setup">Register</button>
-        {{/link-to}}
-        {{#link-to 'index.login'}}
-        <button class="btn btn-primary btn-embossed btn__account-setup">Login</button>
-        {{/link-to}}
-        <p>{{session.session.content.authenticated.user.username}}</p>
+        {{#with-service "session" as |session|}}
+          {{#if session.isAuthenticated}}
+            {{#link-to 'index.add-bot'}}
+              <button class="ss-plus"></button>
+            {{/link-to}}
+            {{#link-to 'logout'}}
+              <button class="register-btn btn btn-default btn__account-setup">Logout</button>
+            {{/link-to}}
+          {{else}}
+            {{#link-to 'index.register'}}
+            <button class="register-btn btn btn-default btn__account-setup">Register</button>
+            {{/link-to}}
+            {{#link-to 'index.login'}}
+            <button class="btn btn-primary btn-embossed btn__account-setup">Login</button>
+            {{/link-to}}
+          {{/if}}
+        {{/with-service}}
       </div>
     </form>
     <div class="modal-overlay">
