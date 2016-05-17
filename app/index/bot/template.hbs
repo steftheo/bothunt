@@ -1,13 +1,12 @@
 <div class="modal fade modal--active" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
+      {{#each model as |bot|}}
       <div class="modal-header">
         {{#link-to 'index'}}
           <button type="button" class="close-form glyphicon glyphicon-remove" data-dismiss="modal"></button>
         {{/link-to}}
-        {{#each model as |bot|}}
 
-        {{/each}}
         <h4 class="modal-title" id="myModalLabel">{{bot.name}}</h4>
       </div>
       <div class="modal-body">
@@ -65,6 +64,7 @@
           </div>
         </div>
       </div>
+      {{/each}}
     </div>
   </div>
 </div>

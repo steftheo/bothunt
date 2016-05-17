@@ -4,6 +4,6 @@ import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   date: attr(),
-  endUser: attr('bwlongs-to'),
+  endUser: attr('belongs-to'),
   bot: belongsTo('bot')
 });

@@ -11,6 +11,7 @@
 
       {{#simple-form onsubmit=(action newUser) as |user|}}
         <div class="modal-body">
+          {{profile-upload fileUrl=url placeholderUrl="images/ui-face-1.png" onchange=(action (mut url))}}
           <div class="form-group input-icon">
             <span class="ss-mail"></span> {{input type="text" class="form-control" placeholder="Full Name" value=user.name}}
           </div>

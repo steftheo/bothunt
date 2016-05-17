@@ -43,8 +43,8 @@
     <div class="bot-item">
       <h3 class="date">Today</h3>
         <ul class="list-group">
-          {{#link-to 'index.bot' bot.id}}
           <li class="list-group-item bot-row">
+            {{#link-to 'index.bot' bot._id}}
             <div class="bot-info">
               <img src={{bot.imageUrl}} alt="" class="bot-image">
               <div class="bot__text-info">
@@ -52,15 +52,17 @@
                 <p class="bot__description">{{bot.description}}</p>
               </div>
             </div>
+            {{/link-to}}
             <a href="{{bot.website}}">
               <span class="ss-globe bot__website"></span>
             </a>
             <div class="like-button">
+              {{!-- {{like-counter likes=bot.score}} --}}
               <button class="btn btn-default ss-star"><br>
-                100</button>
+                {{!-- {{likes}} --}}
+              </button>
             </div>
           </li>
-          {{/link-to}}
         </ul>
     </div>
   {{/each}}

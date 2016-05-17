@@ -29,6 +29,7 @@ Router.map(function() {
 
   this.route('feature', function() {
     this.route('my-profile');
+    this.route('likes');
   });
 });
 
