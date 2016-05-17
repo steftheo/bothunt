@@ -7,7 +7,9 @@ export default Model.extend({
   description: attr(),
   imageUrl: attr(),
   websiteUrl: attr(),
-  dateAdded: attr(),
+  dateAdded: attr('date', {
+    defaultValue() { return new Date(); }
+  }),
   endUser: belongsTo('end-user'),
   implementations: hasMany('implementation')
 });
