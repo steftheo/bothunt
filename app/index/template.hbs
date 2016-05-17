@@ -1,6 +1,6 @@
 <div class="welcome-text">
   <h3 class="welcome-heading">Welcome to Bot Hunt!</h3>
-  <p class="welcome-subtext">The Best Way to Share & Find New ChatBots</p>
+  <p class="welcome-subtext">The Best Way to Fine & Share New ChatBots</p>
 </div>
 
 <div class="main container">
@@ -8,27 +8,33 @@
       <ul class="platforms__categories">
         <h5 class="platform__header">Platforms</h5>
         <li class="platforms__detail">
-          <a href="#"><img class="platform__icon" src="images/messenger.png" alt="messenger" /> Messenger</a>
+          <a href="#"><img class="platform__icon" src="images/messenger.png" alt="messenger" />
+            Messenger</a>
         </li>
 
       <li class="platforms__detail">
-        <a href="#"><img class="platform__icon" src="images/telegram.png" alt="Telegram" /> Telegram</a>
+        <a href="#"><img class="platform__icon" src="images/telegram.png" alt="Telegram" />
+          Telegram</a>
       </li>
 
       <li class="platforms__detail">
-        <a href="#"><img class="platform__icon" src="images/kik.png" alt="Kik" /> Kik</a>
+        <a href="#"><img class="platform__icon" src="images/kik.png" alt="Kik" />
+          Kik</a>
       </li>
 
       <li class="platforms__detail">
-        <a href="#"><img class="platform__icon" src="images/slack.png" alt="Slack" /> Slack</a>
+        <a href="#"><img class="platform__icon" src="images/slack.png" alt="Slack" />
+          Slack</a>
       </li>
 
       <li class="platforms__detail">
-        <a href="#"><img class="platform__icon" src="images/text.png" alt="SMS" /> SMS/Text</a>
+        <a href="#"><img class="platform__icon" src="images/text.png" alt="SMS" />
+          SMS/Text</a>
       </li>
 
       <li class="platforms__detail">
-        <a href="#"><img class="platform__icon" src="images/whatsapp.png" alt="whatsapp" /> Whatsapp</a>
+        <a href="#"><img class="platform__icon" src="images/whatsapp.png" alt="whatsapp" />
+          Whatsapp</a>
       </li>
     </ul>
 
@@ -41,7 +47,7 @@
 <div class="content">
   {{#each model as |bot|}}
     <div class="bot-item">
-      <h3 class="date">Today</h3>
+      {{!-- <h3 class="date">{{bot.dateAdded}}</h3> --}}
         <ul class="list-group">
           <li class="list-group-item bot-row">
             {{#link-to 'index.bot' bot._id}}

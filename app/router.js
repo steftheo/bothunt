@@ -17,7 +17,7 @@ Router.map(function() {
     this.route('add-bot', function() {
     });
   });
-  this.route('add-bot');
+
   this.route('platform', function() {
     this.route('new');
 
