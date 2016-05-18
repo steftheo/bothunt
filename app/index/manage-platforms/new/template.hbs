@@ -1,11 +1,13 @@
 <h1>New Platform</h1>
 
 {{#simple-form onsubmit=(action savePlatform) as |formValues|}}
+  <p>{{profile-upload fileUrl=formValues.logo placeholderUrl="images/ui-face-1.png" onchange=(action (mut formValues.logo))}}</p>
+
   <p>{{input placeholder="URL" value=formValues.url}}</p>
 
   <p>{{input placeholder="Name" value=formValues.name}}</p>
 
-  <p>{{#link-to 'platform.index'}}Cancel{{/link-to}}
+  <p>{{#link-to 'index.manage-platforms'}}Cancel{{/link-to}}
 
   <button>Save</button>
   </p>

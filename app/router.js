@@ -16,15 +16,18 @@ Router.map(function() {
     });
     this.route('add-bot', function() {
     });
-  });
 
-  this.route('platform', function() {
-    this.route('new');
+    this.route('platform', { path: 'platform/:platform_id' });
 
-    this.route('edit', {
-      path: '/:id'
+    this.route('manage-platforms', function() {
+      this.route('new');
+
+      this.route('edit', {
+        path: '/:id'
+      });
     });
   });
+
   this.route('bot');
 
   this.route('feature', function() {

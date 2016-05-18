@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     const platform = this.store.createRecord(`platform`, formValues);
 
     platform.save().then(() => {
-      this.transitionToRoute(`platform.index`);
+      this.transitionToRoute(`index.manage-platforms`);
     });
   },
 });

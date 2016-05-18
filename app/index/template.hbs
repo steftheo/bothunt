@@ -1,19 +1,20 @@
-<div class="welcome-text">
-  <h3 class="welcome-heading">Welcome to Bot Hunt!</h3>
-  <p class="welcome-subtext">The Best Way to Find & Share New ChatBots</p>
-</div>
-
-<div class="main">
-  <nav class="sidebar">
+<div class="main row">
+  <nav class="sidebar col-md-2">
     <ul class="platforms__categories">
       <h5 class="platform__header">Platforms</h5>
       {{#each model.platforms as |platform|}}
-      <li class="platforms__detail">
-        <a href="#"><img class="platform__icon" src="images/messenger.png" alt="messenger" />
-          {{platform.name}}
-        </a>
-      </li>
+        <li class="platforms__detail">
+          {{#link-to 'index.platform' platform.id}}
+            <img class="platform__icon" src= {{platform.logo}} alt="logo" />
+            {{platform.name}}
+          {{/link-to}}
+        </li>
       {{/each}}
+      <li class="platforms__detail">
+        {{#link-to 'index.manage-platforms'}}
+          Add Your Platform <span class="fa fa-plus"></span>
+        {{/link-to}}
+      </li>
     </ul>
 
     <footer class="footer">
@@ -22,33 +23,7 @@
     </footer>
   </nav>
 
-  <div class="content">
-    {{#each model.bots as |bot|}}
-      <div class="bot-item">
-        <h3 class="date">{{bot.dateAdded}}</h3>
-        <ul class="list-group">
-          <li class="list-group-item bot-row">
-            {{#link-to 'index.bot' bot.id}}
-              <div class="bot-info">
-                <img src= {{bot.imageUrl}} alt="" class="bot-image">
-                <div class="bot__text-info">
-                  <h3 class="bot__name">{{bot.name}}</h3>
-                  <p class="bot__description">{{bot.description}}</p>
-                </div>
-              </div>
-            {{/link-to}}
-            <a href= {{bot.websiteURL}}>
-              <span class="ss-globe bot__website"></span>
-            </a>
-            <div class="like-button">
-              {{!-- {{like-counter likes=bot.score}}
-              --}} <button class="btn btn-default ss-star">
-                <br>{{!-- {{likes}}
-                --}} </button>
-            </div>
-          </li>
-        </ul>
-      </div>
-    {{/each}}
+  <div class="content col-md-8">
+    {{outlet}}
   </div>
 </div>

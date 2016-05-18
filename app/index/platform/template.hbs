@@ -1,0 +1,35 @@
+{{#each model.platforms as |platform|}}
+<div class="welcome-text">
+  <h3 class="welcome-heading">{{platform.name}}</h3>
+</div>
+{{/each}}
+
+{{!-- <div class="main">
+  <div class="content">
+    {{#each model.bots as |bot|}}
+      <div class="bot-item">
+        <h3 class="date">{{bot.dateAdded}}</h3>
+        <ul class="list-group">
+          <li class="list-group-item bot-row">
+            {{#link-to 'index.bot' bot.id}}
+              <div class="bot-info">
+                <img src= {{bot.imageUrl}} alt="" class="bot-image">
+                <div class="bot__text-info">
+                  <h3 class="bot__name">{{bot.name}}</h3>
+                  <p class="bot__description">{{bot.description}}</p>
+                </div>
+              </div>
+            {{/link-to}}
+            <a href= {{bot.websiteURL}}>
+              <span class="ss-globe bot__website"></span>
+            </a>
+            <div class="like-button">
+             <button class="btn btn-default ss-star">
+                <br> </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    {{/each}}
+  </div>
+</div> --}}
