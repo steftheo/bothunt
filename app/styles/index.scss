@@ -3,15 +3,19 @@
 }
 
 .main {
-  display: flex;
   margin: 0;
 }
 
+// sidebar
 .sidebar {
   display: flex;
+  position: fixed;
   flex-direction: column;
   align-content: center;
   margin-top: 24px;
+  padding-top: 130px;
+  padding-left: 4rem;
+  z-index: 1;
 }
 
 .platforms__categories {
@@ -38,17 +42,29 @@
   text-align: center;
 }
 
+// main
+
 .content {
   display: block;
-  position: relative;
+  position: static;
+  z-index: 2;
+  padding-left: 300px;
+  padding-top: 100px;
+  width: 100%;
 }
 
 .bot-row {
   display: flex;
+  justify-content: space-between;
+  position: relative;
 
   &:hover {
     border-color: #93a4aa;
   }
+}
+
+.bots {
+  background: #fff;
 }
 
 .bot-info {
@@ -69,24 +85,24 @@
   font-size: 20px;
 }
 
-.bot__platform-messenger {
-  width: 12rem;
-  height: 3rem;
-  color: #ffffff;
-  background: #0084FF;
-  text-align: center;
-}
-
-.bot__website {
+.fa-globe {
+  margin-top: 2.3rem;
+  margin-left: 1rem;
   white-space: none;
   background: none;
-  border: 0;
+  width: 3rem;
+  height: 3rem;
 }
 
 .bot__link {
   white-space: none;
   background: none;
   border: 0;
+}
+
+.bot__name-site {
+  display: flex;
+  align-items: center;
 }
 
 .bot__link-image {

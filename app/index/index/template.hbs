@@ -3,29 +3,6 @@
   <p class="welcome-subtext">The Best Way to Find & Share New ChatBots</p>
 </div>
 {{#each model.bots as |bot|}}
-  <div class="bot-item">
-    <h3 class="date">{{bot.dateAdded}}</h3>
-    <ul class="list-group">
-      <li class="list-group-item bot-row">
-        {{#link-to 'index.bot' bot.id}}
-          <div class="bot-info">
-            <img src= {{bot.imageUrl}} alt="" class="bot-image">
-            <div class="bot__text-info">
-              <h3 class="bot__name">{{bot.name}}</h3>
-              <p class="bot__description">{{bot.description}}</p>
-            </div>
-          </div>
-        {{/link-to}}
-        <a href= {{bot.websiteURL}}>
-          <span class="ss-globe bot__website"></span>
-        </a>
-        <div class="like-button">
-          {{!-- {{like-counter likes=bot.score}}
-          --}} <button class="btn btn-default ss-star">
-            <br>{{!-- {{likes}}
-            --}} </button>
-        </div>
-      </li>
-    </ul>
-  </div>
+<h3 class="date">{{bot.dateAdded}}</h3>
+  {{bot-item bot=bot}}
 {{/each}}
