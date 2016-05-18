@@ -40,7 +40,9 @@
 
             <div class="form-group form-group-sm">
               <label class="col-sm-3 control-label">Platform</label>
-
+              {{#each model as |platform|}}
+              {{x-toggle showLabels=true onLabel=platform.name offLabel="" toggle=(action addPlatform (action (mut formValues.platforms)) formValues.platforms platform)}}
+              {{/each}}
             </div>
 
             <div class="form-group form-group-sm">
