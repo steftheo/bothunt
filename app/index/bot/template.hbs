@@ -1,21 +1,20 @@
 <div class="modal fade modal--active" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      {{#each model as |bot|}}
       <div class="modal-header">
         {{#link-to 'index'}}
           <button type="button" class="close-form glyphicon glyphicon-remove" data-dismiss="modal"></button>
         {{/link-to}}
 
-        <h4 class="modal-title" id="myModalLabel">{{bot.name}}</h4>
+        <h4 class="modal-title" id="myModalLabel">{{model.name}}</h4>
       </div>
       <div class="modal-body">
         <div class="header">
           <div class="bot-detail__info">
-            <img src="{{bot.imageUrl}}" alt="" class="bot-detail__image">
+            <img src= {{model.imageUrl}} alt="" class="bot-detail__image">
             <div class="bot-detail__text">
-              <h3 class="bot-detail__name">{{bot.name}}</h3>
-              <p class="bot-detail__desc">{{bot.description}}</p>
+              <h3 class="bot-detail__name">{{model.name}}</h3>
+              <p class="bot-detail__desc">{{model.description}}</p>
             </div>
             <div class="bot-detail__like-btn">
               <button class="btn btn-default ss-star">
@@ -64,7 +63,6 @@
           </div>
         </div>
       </div>
-      {{/each}}
     </div>
   </div>
 </div>

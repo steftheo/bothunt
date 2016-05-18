@@ -41,14 +41,17 @@
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  position: relative;
   flex-grow: 1;
 }
 
 .bot-row {
   display: flex;
 
+  &:hover {
+    border-color: #93a4aa;
+  }
 }
 
 .bot-info {
