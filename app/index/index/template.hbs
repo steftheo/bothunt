@@ -2,7 +2,9 @@
   <h3 class="welcome-heading">Welcome to Bot Hunt!</h3>
   <p class="welcome-subtext">The Best Way to Find & Share New ChatBots</p>
 </div> --}}
-{{#each model.bots as |bot|}}
-<h3 class="date">{{bot.dateAdded}}</h3>
+{{#each (sort-by "dateAdded:desc" model.bots) as |bot|}}
+<h3 class="date">
+  {{moment-from-now bot.dateAdded interval=10000}}
+</h3>
   {{bot-item bot=bot}}
 {{/each}}
