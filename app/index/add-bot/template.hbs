@@ -47,8 +47,8 @@
 
             <div class="form-group form-group-sm">
               <label class="col-sm-3 control-label">Image</label>
-              <div class="col-sm-9">
-                {{profile-upload fileUrl=formValues.imageUrl placeholderUrl="images/ui-face-1.png" onchange=(action (mut formValues.imageUrl))}}
+              <div class="col-sm-9 pic-upload">
+                {{profile-upload fileUrl=formValues.imageUrl placeholderUrl="images/ui-face-2.png" onchange=(action (mut formValues.imageUrl))}}
               </div>
             </div>
           </form>
