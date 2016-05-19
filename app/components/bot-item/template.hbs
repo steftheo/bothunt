@@ -15,8 +15,9 @@
           {{bot.platform}}
         </div>
       <div class="like-button">
-        <button class="btn btn-default ss-star">
+        <button class="btn btn-default ss-star" {{action addLike bot}}>
           <br>
+          {{bot.likes.length}}
         </button>
       </div>
     </li>

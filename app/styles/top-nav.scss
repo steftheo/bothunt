@@ -12,10 +12,36 @@
 }
 
 .logo {
-  margin: 0 55px 0 40px;
-  padding-top: 15px;
-  vertical-align: middle;
+  width: 5rem;
+  height: 5rem;
 }
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.logo-text {
+  // display: flex;
+  // flex-direction: column;
+  margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.subheader {
+  margin-top: -1rem;
+  font-style: italic;
+  font-size: 14px;
+}
+
+// .logo {
+//   padding-top: 15px;
+// }
 
 .modal-overlay {
   display: none;

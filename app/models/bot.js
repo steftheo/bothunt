@@ -11,5 +11,6 @@ export default Model.extend({
     defaultValue() { return new Date(); }
   }),
   endUser: belongsTo('end-user'),
-  implementations: hasMany('implementation')
+  implementations: hasMany('implementation'),
+  likes: hasMany('like'),
 });
