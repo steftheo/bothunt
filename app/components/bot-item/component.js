@@ -9,7 +9,7 @@ export default Ember.Component.extend({
     const user = this.get(`currentUser.user`);
 
     if (!user) {
-      alert(`Login in to like a bot`);
+      alert(`Gotta Login in to like a bot`);
       return;
     }
 
@@ -21,7 +21,7 @@ export default Ember.Component.extend({
     const user = this.get(`currentUser.user`);
 
     if (!user) {
-      alert(`Login in to destroy a bot`);
+      alert(`Login in to destroy a bot Brah`);
       return;
     }
 

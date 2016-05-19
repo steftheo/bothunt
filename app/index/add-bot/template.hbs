@@ -5,7 +5,7 @@
         {{#link-to 'index'}}
           <button type="button" class="close-form glyphicon glyphicon-remove" data-dismiss="modal"></button>
         {{/link-to}}
-        <h4 class="modal-title" id="myModalLabel">Post a new bot</h4>
+        <h3 class="modal-title" id="myModalLabel">Share a New Bot!</h3>
       </div>
 
       {{#simple-form onsubmit=(action saveBot) as |formValues|}}
@@ -38,7 +38,7 @@
               </div>
             </div>
 
-            <div class="form-group form-group-sm">
+            <div class="form-group form-group-sm toggles">
               <label class="col-sm-3 control-label">Platform</label>
               {{#each model as |platform|}}
               {{x-toggle showLabels=true onLabel=platform.name offLabel="" toggle=(action addPlatform (action (mut formValues.platforms)) formValues.platforms platform)}}
@@ -47,7 +47,7 @@
 
             <div class="form-group form-group-sm">
               <label class="col-sm-3 control-label">Image</label>
-              <div class="col-sm-9 pic-upload">
+              <div class="col-sm-9">
                 {{profile-upload fileUrl=formValues.imageUrl placeholderUrl="images/ui-face-2.png" onchange=(action (mut formValues.imageUrl))}}
               </div>
             </div>

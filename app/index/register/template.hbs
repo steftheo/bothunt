@@ -6,12 +6,14 @@
           <button type="button" class="close-form glyphicon glyphicon-remove" data-dismiss="modal"></button>
         {{/link-to}}
         {{!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> --}}
-        <h4 class="modal-title" id="myModalLabel">Register to Join the Fun!</h4>
+        <h3 class="modal-title" id="myModalLabel">Register to Join the Fun!</h3>
       </div>
 
       {{#simple-form onsubmit=(action newUser) as |user|}}
         <div class="modal-body">
-          {{profile-upload fileUrl=url placeholderUrl="images/ui-face-1.png" onchange=(action (mut url))}}
+          <div class="form-group">
+            {{profile-upload fileUrl=url placeholderUrl="images/ui-face-1.png" onchange=(action (mut url))}}
+          </div>
           <div class="form-group input-icon">
             <span class="ss-mail"></span> {{input type="text" class="form-control" placeholder="Full Name" value=user.name}}
           </div>
