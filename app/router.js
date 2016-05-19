@@ -11,6 +11,9 @@ Router.map(function() {
   this.route(`index`, { path: `/` }, function() {
     this.route(`register`);
     this.route(`login`);
+
+    this.route('my-profile');
+
     this.route('bot', {
       path: '/:id'
     });
@@ -29,11 +32,6 @@ Router.map(function() {
   });
 
   this.route('bot');
-
-  this.route('feature', function() {
-    this.route('my-profile');
-    this.route('likes');
-  });
 });
 
 export default Router;

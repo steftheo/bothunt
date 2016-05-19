@@ -1,25 +1,26 @@
 <div class="bots">
   <ul class="list-group">
     <li class="list-group-item bot-row">
-        <div class="bot-info">
-          <img src= {{bot.imageUrl}} alt="" class="bot-image">
-          <div class="bot__text-info">
-            <div class="bot__name-site">
-              <h3 class="bot__name">{{bot.name}}</h3>
-              <a href= {{bot.websiteURL}} class="fa fa-globe"></a>
-            </div>
-            <p class="bot__description">{{bot.description}}</p>
+      <div class="bot-info">
+        <img src= {{bot.imageUrl}} alt="" class="bot-image">
+        <div class="bot__text-info">
+          <div class="bot__name-site">
+            <h3 class="bot__name">{{bot.name}}</h3>
+            <a class="fa fa-globe">{{bot.websiteURL}}</a>
           </div>
+          <p class="bot__description">{{bot.description}}</p>
         </div>
-        <div class="platforms">
-          {{bot.platform}}
-        </div>
+      </div>
+      <div class="platforms">
+        {{bot.platform}}
+      </div>
       <div class="like-button">
-        <button class="btn btn-default ss-star" {{action addLike bot}}>
-          <br>
-          {{bot.likes.length}}
+        <button class="btn btn-like ss-star {{if (exists-in-both currentUser.user.likeIds bot.likeIds) "btn-primary" "btn-default"}}" disabled= {{exists-in-both currentUser.user.likeIds bot.likeIds}} {{action addLike bot}}>
+          <br> {{bot.likes.length}}
         </button>
       </div>
+
+      <button class="bot-row__close" {{action destroyBot bot}}><span class="fa fa-close"></span></button>
     </li>
   </ul>
-  </div>
+</div>

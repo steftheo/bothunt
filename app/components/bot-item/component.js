@@ -9,11 +9,17 @@ export default Ember.Component.extend({
     const user = this.get(`currentUser.user`);
 
     if (!user) {
-      alert(`You must be logged in to like a bot`);
+      alert(`Login in to like a bot`);
       return;
     }
 
     // Create a new like record with the bot and user
-    this.get(`store`).createRecord('like', { bot, endUser: user }).save();
+    this.get(`store`).createRecord(`like`, { bot, endUser: user }).save();
+  },
+
+  destroyBot(bot) {
+    if (confirm(`You Sure Fam?`)) {
+      bot.destroyRecord();
+    }
   },
 });

@@ -1,0 +1,8 @@
+<div class="main container">
+  <div class="row">
+    <h2>My Bots</h2>
+  </div>
+  {{#each model.bots as |bot|}}
+    {{bot-item bot=bot}}
+  {{/each}}
+</div>

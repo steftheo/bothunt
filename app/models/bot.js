@@ -13,4 +13,6 @@ export default Model.extend({
   endUser: belongsTo('end-user'),
   implementations: hasMany('implementation'),
   likes: hasMany('like'),
+
+  likeIds: Ember.computed.mapBy('likes', 'id'),
 });
