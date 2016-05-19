@@ -18,6 +18,13 @@ export default Ember.Component.extend({
   },
 
   destroyBot(bot) {
+    const user = this.get(`currentUser.user`);
+
+    if (!user) {
+      alert(`Login in to destroy a bot`);
+      return;
+    }
+
     if (confirm(`You Sure Fam?`)) {
       bot.destroyRecord();
     }

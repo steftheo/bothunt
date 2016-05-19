@@ -20,7 +20,7 @@
         {{#with-service "session" as |session|}}
           {{#if session.isAuthenticated}}
             {{#link-to 'index.add-bot'}}
-              <button class="ss-plus"></button>
+              <button class="add-bot ss-plus"></button>
             {{/link-to}}
             {{#link-to 'index.my-profile'}}
             <button class="btn btn-primary btn__account-setup">My Profile</button>

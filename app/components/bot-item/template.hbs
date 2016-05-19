@@ -6,16 +6,20 @@
         <div class="bot__text-info">
           <div class="bot__name-site">
             <h3 class="bot__name">{{bot.name}}</h3>
-            <a class="fa fa-globe">{{bot.websiteURL}}</a>
+            <a href="{{bot.websiteUrl}}" target="_blank" rel="noopener">{{fa-icon "fa-globe"}}</a>
           </div>
           <p class="bot__description">{{bot.description}}</p>
         </div>
       </div>
       <div class="platforms">
-        {{bot.platform}}
+        {{#each model.platforms as |platform|}}
+        {{#link-to 'index.platform' platform.id}}
+        <img class="platform__icon" src= {{platform.logo}} alt="logo" />
+        {{/link-to}}
+        {{/each}}
       </div>
       <div class="like-button">
-        <button class="btn btn-like ss-star {{if (exists-in-both currentUser.user.likeIds bot.likeIds) "btn-primary" "btn-default"}}" disabled= {{exists-in-both currentUser.user.likeIds bot.likeIds}} {{action addLike bot}}>
+        <button class="btn btn-embossed btn-like ss-star {{if (exists-in-both currentUser.user.likeIds bot.likeIds) "btn-default btn-embossed" "btn-primary btn-embossed" }}" disabled= {{exists-in-both currentUser.user.likeIds bot.likeIds}} {{action addLike bot}}>
           <br> {{bot.likes.length}}
         </button>
       </div>
