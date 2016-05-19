@@ -1,12 +1,11 @@
 <div class="main row">
   <nav class="sidebar col-md-2">
     <ul class="platforms__categories">
-      <h5 class="platform__header">Platforms</h5>
+      <h5 class="platform__header"> Bot Platforms</h5>
       {{#each model.platforms as |platform|}}
         <li class="platforms__detail">
           {{#link-to 'index.platform' platform.id}}
-            <img class="platform__icon" src= {{platform.logo}} alt="logo" />
-            {{platform.name}}
+            <img class="platform__icon" src= {{platform.logo}} alt="logo" /> {{platform.name}}
           {{/link-to}}
         </li>
       {{/each}}
@@ -16,13 +15,20 @@
         {{/link-to}}
       </li>
     </ul>
-
+    <br>
     <footer class="footer">
+      {{#with-service "session" as |session|}}
+        {{#if session.isAuthenticated}}
+          {{#link-to 'logout'}}
+            <button class="btn btn-stroke btn-xs btn__account-setup">Logout</button>
+          {{/link-to}}
+        {{/if}}
+      {{/with-service}}
       <p class="legal">Made by <a href="https://www.twitter.com/steftheo11" target="_blank" rel="noopener">@steftheo11</a></p>
     </footer>
   </nav>
 
-  <div class="content col-md-8">
+  <div class="app__content content col-md-8">
     {{outlet}}
   </div>
 </div>

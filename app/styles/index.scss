@@ -9,20 +9,20 @@
 
 // sidebar
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: flex-start;
+  // display: flex;
+  // flex-direction: column;
+  // align-content: center;
+  // justify-content: flex-start;
   margin-top: 24px;
-  padding-top: 100px;
+  // padding-top: 100px;
   padding-left: 4rem;
   width: 20rem;
 }
 
 .platforms__categories {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-content: center;
   padding-left: 0;
 }
 
@@ -37,20 +37,23 @@
 }
 
 .footer {
-  // display: flex;
-  // flex-direction: column;
+  display: block;
   text-align: center;
   padding-top: 3rem;
 }
 
+.legal {
+  margin-top: 1rem;
+}
+
 
 .content {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: flex-end;
-  padding-left: 7rem;
+  // display: flex;
+  // position: relative;
+  // flex-direction: column;
+  // flex-grow: 1;
+  // justify-content: flex-end;
+  padding-left: 5rem;
 
   // display: block;
   // z-index: 2;

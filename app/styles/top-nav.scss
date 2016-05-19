@@ -1,9 +1,9 @@
-.top-nav {
-  display: block;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-}
+// .top-nav {
+//   display: block;
+//   position: fixed;
+//   width: 100%;
+//   z-index: 1;
+// }
 
 .register-btn {
   border: 0;
@@ -47,15 +47,22 @@
   display: none;
 }
 
-.add-bot {
-  white-space: none;
-  background: none;
-  border: 0;
-}
+// .add-bot {
+//   white-space: none;
+//   background: none;
+//   border: 0;
+// }
 
 .ss-plus {
-  padding-right: 1.5rem;
+//   padding-right: 1.5rem;
   color: #a88cd5;
+}
+
+.add-btn {
+  border: 1px solid #a88cd5;
+  background: none;
+  white-space: none;
+  margin-right: 1rem;
 }
 
 // .login-btn {

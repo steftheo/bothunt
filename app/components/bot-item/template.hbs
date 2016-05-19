@@ -12,11 +12,16 @@
         </div>
       </div>
       <div class="platforms">
-        {{#each model.platforms as |platform|}}
-        {{#link-to 'index.platform' platform.id}}
-        <img class="platform__icon" src= {{platform.logo}} alt="logo" />
-        {{/link-to}}
-        {{/each}}
+
+        {{#if bot.implementations.isPending}}
+          <span class="fa fa-spinner fa-2x fa-spin"></span>
+        {{else}}
+          {{#each bot.implementations as |implementation|}}
+          {{#link-to 'index.platform' implementation.platform.id}}
+          <img class="platform__icon" src= {{implementation.platform.logo}} alt="logo" />
+          {{/link-to}}
+          {{/each}}
+        {{/if}}
       </div>
       <div class="like-button">
         <button class="btn btn-embossed btn-like ss-star {{if (exists-in-both currentUser.user.likeIds bot.likeIds) "btn-default btn-embossed" "btn-primary btn-embossed" }}" disabled= {{exists-in-both currentUser.user.likeIds bot.likeIds}} {{action addLike bot}}>
