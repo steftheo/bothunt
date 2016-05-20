@@ -10,9 +10,13 @@
         </li>
       {{/each}}
       <li class="platforms__detail">
+        {{#with-service "session" as |session|}}
+          {{#if session.isAuthenticated}}
         {{#link-to 'index.manage-platforms'}}
           <p class="add-platform btn btn-purple btn-embossed btn-sm">Add Your Platform</p>
         {{/link-to}}
+        {{/if}}
+      {{/with-service}}
       </li>
     </ul>
     <br>
