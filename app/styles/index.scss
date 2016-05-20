@@ -7,6 +7,18 @@
   margin: 0;
 }
 
+.bot-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.platforms {
+  padding-right: 1rem;
+}
+
 // sidebar
 .sidebar {
   // display: flex;
@@ -126,7 +138,6 @@
 }
 
 .btn-like {
-  margin-left: 25rem;
 
   &:focus {
     color: #ffffff;
@@ -138,7 +149,8 @@
   white-space: none;
   background: none;
   border: none;
-  margin-left: 3rem;
+  // margin-left: 3rem;
+
 }
 
 // .fa-close {
