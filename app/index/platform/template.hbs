@@ -3,5 +3,7 @@
 </div>
 
 {{#each model.implementations as |implementation|}}
-  {{bot-item bot=implementation.bot}}
+  {{#if implementation.bot}}
+    {{bot-item bot=implementation.bot}}
+  {{/if}}
 {{/each}}
